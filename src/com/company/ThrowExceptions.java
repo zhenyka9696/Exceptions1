@@ -9,7 +9,8 @@ public class ThrowExceptions {
         System.out.print("Enter the month: ");
         int month=scanner.nextInt();
 if(month<1||month>12) throw  new IllegalArgumentException(
-        String.format("month %d is invalid,the number should be in range 1..12",month)
+String.format("month %d is invalid,the number " +
+        "should be in range 1..12",month)
 );
         String season;
         if(month<3) season="winter";
@@ -18,6 +19,5 @@ if(month<1||month>12) throw  new IllegalArgumentException(
         else if(month<12) season="autumn";
         else season="winter";
         System.out.println(season);
-
-    }
+}
 }
